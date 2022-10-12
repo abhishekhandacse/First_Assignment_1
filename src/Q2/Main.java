@@ -14,11 +14,10 @@ import java.util.Arrays;
 public class Main {
 
     /**
+     * This function finds the Voter by Voter Postal code given and prints that.
      *
-     * @param voterBase
-     * @param voterPCode
      */
-    //This function finds the Voter by Voter Postal code given and prints that.
+
     static void findVotersByVoterPCode(Voter[] voterBase,String voterPCode){
         for(int i=0;i<voterBase.length;i++){
             if(voterBase[i]==null)continue;
@@ -28,11 +27,8 @@ public class Main {
     }
 
     /**
-     *
-     * @param voterBase
-     * @param age
+     * This function finds the voters by age that is less than the age parameter passed to function
      */
-    //This function finds the voters by age that is less than the age parameter passed to function
     static void findYougerThanByAge(Voter[] voterBase,byte age){
         for(int i=0;i<voterBase.length;i++){
             if(voterBase[i]==null)continue;
@@ -42,9 +38,7 @@ public class Main {
     }
 
     /**
-     *
-     * @param args
-     * @throws Exception
+     * Main method containing the driver code
      */
     public static void main(String[] args) throws Exception{
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
@@ -202,6 +196,8 @@ public class Main {
             }else if(selectedOption==5){
                 System.out.println("You have selected to end the program !!");
                 break;
+            }else{
+                System.out.println("Please select the input from the given options only !!");
             }
         }
 

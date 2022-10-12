@@ -13,6 +13,12 @@ import java.util.Arrays;
 
 public class Main {
 
+    /**
+     *
+     * @param voterBase
+     * @param voterPCode
+     */
+    //This function finds the Voter by Voter Postal code given and prints that.
     static void findVotersByVoterPCode(Voter[] voterBase,String voterPCode){
         for(int i=0;i<voterBase.length;i++){
             if(voterBase[i]==null)continue;
@@ -21,6 +27,12 @@ public class Main {
         }
     }
 
+    /**
+     *
+     * @param voterBase
+     * @param age
+     */
+    //This function finds the voters by age that is less than the age parameter passed to function
     static void findYougerThanByAge(Voter[] voterBase,byte age){
         for(int i=0;i<voterBase.length;i++){
             if(voterBase[i]==null)continue;
@@ -29,6 +41,11 @@ public class Main {
         }
     }
 
+    /**
+     *
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception{
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
         final String password="password";

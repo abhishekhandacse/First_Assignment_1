@@ -56,12 +56,7 @@ public class Q2Part1 {
         Arrays.sort(vowelsCharArray);
         return new String(consonentsCharArray)+repeatingConsonents+numbers+new String(vowelsCharArray);
     }
-/*
-*  1) Consonent not getting repeated
-*  2) Consonent getting repeated
-*  3) Numbers
-*  4) Vowels
-* */
+
     public static void main(String[] args) {
         String str="assignment1";
         String ans=arrange(str);
@@ -70,5 +65,38 @@ public class Q2Part1 {
 }
 /*
 1)
-2)
+    Pseudocode
+    Initialize HashMap
+
+    FOR i-> 0 to str.length()-1
+        hm.put(Character at pos i, frequency of the character)
+    END FOR
+
+    Initialize string consonants, repeatingConsonants, numbers and vowels
+
+    For i-> HashMap start to HashMap end
+        Character:= HasMap character at i
+        Value:= Frequency of character at i
+
+        IF Character is Vowel
+            Append to Vowel String
+        ELSE IF Character is Number
+            Append to Number String
+        ELSE
+            IF Value is 1
+                Append to Consonant String
+            ELSE
+                Append to RepeatingConsonant String
+            END IF
+
+        END IF
+
+    END FOR
+
+    consonant:=sort(consonant)
+    vowel:=sort(vowel)
+
+    PRINT consonant, repeatingConsonant, Number, Vowel
+2) Time Complexity-: O(NlogN)
+3) Space Complexity -: O(N)
 */

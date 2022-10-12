@@ -1,6 +1,9 @@
-/*
-*   Submitted By-: Abhishek HANDA (40231719)
-*/
+//..........................................
+// Assignment 1
+// © Abhishek Handa
+// Written by: (Abhishek Handa [40231719])
+//.........................................
+
 
 package Q2;
 

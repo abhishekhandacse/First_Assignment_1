@@ -78,7 +78,7 @@ public class Main {
                             System.out.println("How many Voters you want to add ?");
                             int numberOfVoters = Integer.parseInt(br.readLine());
                             if ((voterBaseCount + numberOfVoters) > maxVoters) {
-                                System.out.println("Due to space constraints, you can only add " + (voterBaseCount + numberOfVoters - maxVoters - 1) + " number of voters");
+                                System.out.println("Due to space constraints, you can only add " + Math.max((maxVoters-voterBaseCount-numberOfVoters),0 ) + " number of voters");
                             }
 
                             for (int j = 0; j < numberOfVoters; j++) {
@@ -204,8 +204,13 @@ public class Main {
             //Since we are using BufferedReader, it may throw the IOException(It may occur due to the file deleted or
             //viruses in the file. Sometimes BufferedReader takes data from a network stream where the reading system
             //can fail at any time. So this type of error can occur in input operation when a BufferedReader is used.)
-            System.out.println("There was an IOException while reading the input" + e);
-        } catch (Exception e) {
+            System.out.println("There was an IOException while reading the input " + e);
+        }catch (NumberFormatException e){
+
+            System.out.println("In Java that occurs when an attempt is made to convert a string with an incorrect format to a numeric value "+e);
+        }
+
+        catch (Exception e) {
             //Handling the exception in case any exception occurs above, and we have not handled that exception.
             //So it will get handled in this catch and program will continue to run.
             System.out.println("There was an Exception" + e);
